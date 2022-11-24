@@ -8,6 +8,7 @@ public class DootTransition : MonoBehaviour
 
     public int SceneIndex;
     public Animator ani_controller;
+    bool isOpen = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,16 @@ public class DootTransition : MonoBehaviour
         if (gameObject.activeSelf)
         {
             if(Input.GetKeyDown(KeyCode.E)){
-                ani_controller.SetTrigger("DoorOpen");
+                if (isOpen)
+                {
+                    ani_controller.SetTrigger("DoorClose");
+                    isOpen = false;
+                }
+                else
+                {
+                    ani_controller.SetTrigger("DoorOpen");
+                    isOpen = true;
+                }
                 if(SceneIndex != -1)
                 {
                     SceneManager.LoadScene(SceneIndex);
