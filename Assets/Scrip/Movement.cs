@@ -47,7 +47,7 @@ public class Movement : MonoBehaviour
 
         float xMovement = Input.GetAxisRaw("Horizontal");
         float zMovement = Input.GetAxisRaw("Vertical");
-        Debug.Log(zMovement);
+ 
         Vector3 move = transform.forward * zMovement + transform.right * xMovement;
         controller.Move(move * movementSpeed * Time.deltaTime);
 
