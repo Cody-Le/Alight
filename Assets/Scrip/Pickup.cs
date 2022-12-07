@@ -47,7 +47,7 @@ public class Pickup : MonoBehaviour
                     pickingObject.GetComponent<Rigidbody>().useGravity = false;
                     pickingObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                     pickingObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-                    pickingObject.GetComponent<SphereCollider>().isTrigger = true;
+                    pickingObject.GetComponent<BoxCollider>().isTrigger = true;
                     pickingObject.transform.position = Vector3.zero;
                     pickingObject.transform.localPosition = pickupOffset;
 
@@ -56,7 +56,7 @@ public class Pickup : MonoBehaviour
             else
             {
                 pickingObject.GetComponent<Rigidbody>().useGravity = true;
-                pickingObject.GetComponent<SphereCollider>().isTrigger = false;
+                pickingObject.GetComponent<BoxCollider>().isTrigger = false;
                 pickingObject.transform.parent = null;
                 pickingObject = null;
 

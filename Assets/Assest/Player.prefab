@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 7996196508639986613}
   - component: {fileID: 7996196508639986614}
   - component: {fileID: 7996196508639986609}
+  - component: {fileID: 23841446221207227}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -274,6 +275,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 120
   playerBody: {fileID: 7996196507716194887}
+--- !u!114 &23841446221207227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996196508639986618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64877313f87d5e94b9edc1afb62545d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickableHalfExtent: {x: 2, y: 4, z: 4}
+  pickupOffset: {x: -0.75, y: -0.1, z: 1}
+  pickableLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &7996196508846682559
 GameObject:
   m_ObjectHideFlags: 0
