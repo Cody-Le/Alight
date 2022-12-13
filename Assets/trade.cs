@@ -6,7 +6,7 @@ public class trade : MonoBehaviour
 {
 
     public GameObject[] tradeObject;
-
+    public GameObject[] wallDisappear;
 
 
 
@@ -30,7 +30,9 @@ public class trade : MonoBehaviour
         if (quality != null)
         {
             Instantiate(tradeObject[quality.tradeValue]);
+            wallDisappear[quality.tradeValue].active = false;
             Destroy(collision.gameObject);
+            
 
         }
     }
