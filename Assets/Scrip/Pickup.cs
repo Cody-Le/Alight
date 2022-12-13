@@ -35,7 +35,7 @@ public class Pickup : MonoBehaviour
 
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.E)){
+       if (Input.GetMouseButtonDown(0)){
 
             if (pickingObject == null) {
                 bool pickableInRange = Physics.CheckBox(transform.position, pickableHalfExtent, Quaternion.identity, pickableLayer);
