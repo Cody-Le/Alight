@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HallWay.unity
     guid: f7cadd02e0129a94a9cba09a00df4cb2
+  - enabled: 1
+    path: Assets/Scenes/Cafteria.unity
+    guid: 58c2087edf0ced24c9e2550e8f67c5af
   m_configObjects: {}

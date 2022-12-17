@@ -38,11 +38,9 @@ public class Pickup : MonoBehaviour
        if (Input.GetMouseButtonDown(0)){
 
             if (pickingObject == null) {
-                bool pickableInRange = Physics.CheckBox(transform.position, pickableHalfExtent, Quaternion.identity, pickableLayer);
-
-                if (pickableInRange)
+                pickingObject = FindClosestPickup();
+                if(pickingObject != null)
                 {
-                    pickingObject = FindClosestPickup();
                     pickingObject.transform.parent = transform;
                     pickingObject.GetComponent<Rigidbody>().useGravity = false;
                     pickingObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
@@ -50,7 +48,6 @@ public class Pickup : MonoBehaviour
                     pickingObject.GetComponent<BoxCollider>().isTrigger = true;
                     pickingObject.transform.position = Vector3.zero;
                     pickingObject.transform.localPosition = pickupOffset;
-
                 }
             }
             else

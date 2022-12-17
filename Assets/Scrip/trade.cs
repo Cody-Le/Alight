@@ -7,7 +7,7 @@ public class trade : MonoBehaviour
 
     public GameObject[] tradeObject;
     public GameObject[] wallDisappear;
-
+    public Transform instantiatePosition;
 
 
 
@@ -29,7 +29,8 @@ public class trade : MonoBehaviour
         tradeQualities quality = collision.gameObject.GetComponent<tradeQualities>();
         if (quality != null)
         {
-            Instantiate(tradeObject[quality.tradeValue]);
+            GameObject key = Instantiate(tradeObject[quality.tradeValue]);
+            key.transform.position = instantiatePosition.position;
             wallDisappear[quality.tradeValue].active = false;
             Destroy(collision.gameObject);
             
