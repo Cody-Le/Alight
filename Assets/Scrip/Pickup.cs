@@ -8,8 +8,9 @@ public class Pickup : MonoBehaviour
 {
 
     public Vector3 pickableHalfExtent;
-    public Vector3 pickupOffset;
+    public GameObject holdingObject;
     public LayerMask pickableLayer;
+    public Vector3 holdingOffSet;
     GameObject pickingObject;
 
     public GameObject FindClosestPickup()
@@ -41,13 +42,14 @@ public class Pickup : MonoBehaviour
                 pickingObject = FindClosestPickup();
                 if(pickingObject != null)
                 {
-                    pickingObject.transform.parent = transform;
+                    pickingObject.transform.parent = holdingObject.transform;
+                    pickingObject.transform.localPosition = holdingOffSet;
                     pickingObject.GetComponent<Rigidbody>().useGravity = false;
                     pickingObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                     pickingObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                     pickingObject.GetComponent<BoxCollider>().isTrigger = true;
-                    pickingObject.transform.position = Vector3.zero;
-                    pickingObject.transform.localPosition = pickupOffset;
+                    pickingObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                
                 }
             }
             else

@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Movement : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class Movement : MonoBehaviour
     CharacterController controller;
     public float movementSpeed = 1f;
     public float positionClamp = 32f;
+    public float rotationSpeed = 0.5f;
 
     Vector3 velocity;
     public float gravity = -9.81f;
@@ -15,17 +18,20 @@ public class Movement : MonoBehaviour
     public float groundDistance;
     public LayerMask groundMask;
 
+    public Animator animator;
+
 
     public float jumpHeight = 2f;
 
     bool isGrounded = false;
-
+    bool isWalking = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -51,12 +57,36 @@ public class Movement : MonoBehaviour
         Vector3 move = transform.forward * zMovement;
         controller.Move(move * movementSpeed * Time.deltaTime);
 
+        float rotate = xMovement * rotationSpeed;
+        transform.Rotate(Vector3.up * rotate * Time.deltaTime);
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
+        if((Mathf.Abs(move.magnitude) + Mathf.Abs(rotate)) > 0)
+        {
+            if(isWalking == false)
+            {
+                isWalking = true;
+                
+                animator.SetTrigger("Walking");
+               
+            }
+            
 
-        if(positionClamp != 0f)
+        }
+        else
+        {
+            if (isWalking == true)
+            {
+                isWalking = false;
+                animator.SetTrigger("Idling");
+            }
+        }
+        
+
+
+        if (positionClamp != 0f)
         {
             transform.position = new Vector3(Mathf.Clamp(transform.position.x, -positionClamp, positionClamp), transform.position.y, Mathf.Clamp(transform.position.z, -positionClamp, positionClamp));
         }

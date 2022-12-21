@@ -37,6 +37,7 @@ public class ConditionalTransition : MonoBehaviour
                 }
                 if(SceneIndex != -1)
                 {
+                    player.transform.localPosition = new Vector3(0,player.transform.position.y + 0.1f,0);
                     SceneManager.LoadScene(SceneIndex);
                     
                 }
