@@ -10,13 +10,14 @@ public class ConditionalTransition : MonoBehaviour
     public Animator ani_controller;
     bool isOpen = false;
     GameObject player;
+    CharacterController playerController;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     // Update is called once per frame
@@ -24,7 +25,8 @@ public class ConditionalTransition : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
-            if(Input.GetKeyDown(KeyCode.E)){
+            
+            if (Input.GetKeyDown(KeyCode.E)){
                 if (isOpen)
                 {
                     ani_controller.SetTrigger("DoorClose");
@@ -37,7 +39,9 @@ public class ConditionalTransition : MonoBehaviour
                 }
                 if(SceneIndex != -1)
                 {
-                    player.transform.localPosition = new Vector3(0,player.transform.position.y + 0.1f,0);
+
+                    playerController.enabled = false;
+                
                     SceneManager.LoadScene(SceneIndex);
                     
                 }
