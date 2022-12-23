@@ -25,7 +25,7 @@ public class Door_InRange : MonoBehaviour
         {
             if(outLine != null)
             {
-                Debug.Log(CheckPlayer);
+           
                 if (CheckPlayer)
                 {
                     if (teleportOnOpen)
