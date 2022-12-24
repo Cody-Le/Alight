@@ -31,7 +31,10 @@ public class trade : MonoBehaviour
         {
             GameObject key = Instantiate(tradeObject[quality.tradeValue]);
             key.transform.position = instantiatePosition.position;
-            wallDisappear[quality.tradeValue].active = false;
+            if(wallDisappear.Length > 0)
+            {
+                wallDisappear[quality.tradeValue].active = false;
+            }
             Destroy(collision.gameObject);
             
 
