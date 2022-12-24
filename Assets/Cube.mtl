@@ -1,0 +1,23 @@
+newmtl Lit
+Kd 0.5 0.5 0.5
+d 1
+
+newmtl Chair
+Kd 0 0 0
+d 1
+
+newmtl Ground
+Kd 0.5566037 0.3838058 0.1601548
+d 1
+
+newmtl WallUnder
+Kd 0.8962264 0.8158902 0.6045301
+d 1
+
+newmtl Wall
+bump texture.jpg
+disp Wall_texture.jpg
+map_Kd Wall_texture.jpg
+Kd 0.7075471 0.7075471 0.7075471
+d 1
+
