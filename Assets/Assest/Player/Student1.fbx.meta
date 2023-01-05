@@ -1,9 +1,32 @@
 fileFormatVersion: 2
-guid: f23dc3d1206641c439e1f3b94160ecec
+guid: b47e4e6677a3e6c428edc30d9e4774de
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
-  externalObjects: {}
+  internalIDToNameTable:
+  - first:
+      74: -5674447658258469685
+    second: Object|Action
+  - first:
+      74: -4784011504375833356
+    second: Object|HairAction
+  - first:
+      74: 4649480259485076429
+    second: Object|HairAction.001
+  - first:
+      74: 1295804226818295684
+    second: Object|metarig.001Action
+  - first:
+      74: 8551669405721706843
+    second: Object|SunAction
+  - first:
+      74: 4959330923049072976
+    second: Object|Walking
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 207bb7f288cb65f42891988422912cfc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -69,12 +92,12 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 180
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
+    normalSmoothingSource: 2
   referencedClips: []
   importAnimation: 1
   humanDescription:
