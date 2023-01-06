@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        DontDestroyOnLoad(gameObject);
+  
     }
 
     // Update is called once per frame

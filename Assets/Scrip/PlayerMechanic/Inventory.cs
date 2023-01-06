@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public float spaceBetweenItem = 10f;
+    public float scrollSpeed = 100f;
     public Transform startingPosition;
 
     public GameObject ItemUseMenu;
@@ -20,7 +21,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scrollValue += Input.GetAxisRaw("Mouse ScrollWheel") * 50;
+        scrollValue += Input.GetAxisRaw("Mouse ScrollWheel") * scrollSpeed;
     
         int i = 0;
         foreach (Transform child in transform)
