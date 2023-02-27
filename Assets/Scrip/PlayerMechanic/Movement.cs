@@ -25,6 +25,8 @@ public class Movement : MonoBehaviour
 
     bool isGrounded = false;
     bool isWalking = false;
+    bool isBacking = false;
+
 
 
     // Start is called before the first frame update
@@ -53,6 +55,24 @@ public class Movement : MonoBehaviour
 
         float xMovement = Input.GetAxisRaw("Horizontal");
         float zMovement = Input.GetAxisRaw("Vertical");
+
+        
+
+        if (!isBacking && zMovement < 0)
+        {
+            Vector3 scale = transform.localScale;
+            isBacking = true;
+            transform.localScale = new Vector3(scale.x * -1, scale.y, scale.z * -1);
+
+        }
+        else if (zMovement >= 0 && isBacking)
+        {
+            Vector3 scale = transform.localScale;
+            isBacking = false;
+            transform.localScale = new Vector3(scale.x * -1, scale.y, scale.z * -1);
+            transform.Rotate(new Vector3(0f, 180f, 0f));
+        }
+
 
         Vector3 move = transform.forward * zMovement;
         controller.Move(move * movementSpeed * Time.deltaTime);
