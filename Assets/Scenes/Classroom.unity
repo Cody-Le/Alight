@@ -2578,7 +2578,7 @@ PrefabInstance:
     - target: {fileID: 5478763084646709213, guid: 887cb1b8e8ab4f240aee825d3691cba3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5478763084646709213, guid: 887cb1b8e8ab4f240aee825d3691cba3,
         type: 3}
@@ -2710,7 +2710,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42516
+  m_Name: pb_Mesh27414
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5118,7 +5118,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 132.3, y: 90, z: 0}
 --- !u!1 &1281890842
 GameObject:
@@ -5520,7 +5520,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27470
+  m_Name: pb_Mesh27606
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7037,7 +7037,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31332
+  m_Name: pb_Mesh27750
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7636,6 +7636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
+  runningFactor: 1.2
   positionClamp: 0
   rotationSpeed: 80
   gravity: -50
@@ -7682,7 +7683,7 @@ Transform:
   - {fileID: 7263722845143523093}
   - {fileID: 631864975}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -3.114, z: 0.079}
 --- !u!143 &7263722843723644141
 CharacterController:
@@ -7786,6 +7787,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player3rdPerson 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107086578009013028, guid: 026aa2c2b7267034faf68397f808c108,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107086578009013028, guid: 026aa2c2b7267034faf68397f808c108,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8711580563970733747, guid: 026aa2c2b7267034faf68397f808c108,
         type: 3}

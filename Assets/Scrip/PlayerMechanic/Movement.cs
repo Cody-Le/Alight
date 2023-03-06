@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
 
     CharacterController controller;
     public float movementSpeed = 1f;
+    public float runningFactor = 1.2f;
     public float positionClamp = 32f;
     public float rotationSpeed = 0.5f;
 
@@ -26,6 +27,8 @@ public class Movement : MonoBehaviour
     bool isGrounded = false;
     bool isWalking = false;
     bool isBacking = false;
+    bool isRunning = false;
+
 
 
 
@@ -75,6 +78,10 @@ public class Movement : MonoBehaviour
 
 
         Vector3 move = transform.forward * zMovement;
+        if (isRunning)
+        {
+            move *= runningFactor;
+        }
         controller.Move(move * movementSpeed * Time.deltaTime);
 
         float rotate = xMovement * rotationSpeed;
@@ -88,8 +95,16 @@ public class Movement : MonoBehaviour
             if(isWalking == false)
             {
                 isWalking = true;
+                if (isRunning)
+                {
+                    animator.SetTrigger("Running");
+                }
+                else
+                {
+                    animator.SetTrigger("Walking");
+                }
+
                 
-                animator.SetTrigger("Walking");
                
             }
             
@@ -103,7 +118,17 @@ public class Movement : MonoBehaviour
                 animator.SetTrigger("Idling");
             }
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+
+            isRunning = true;
+
+        }else if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            isRunning = false;
+        }
+
 
 
         if (positionClamp != 0f)
