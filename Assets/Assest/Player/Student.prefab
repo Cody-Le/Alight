@@ -983,6 +983,7 @@ GameObject:
   - component: {fileID: 1552545706275215574}
   - component: {fileID: 372869891963435281}
   - component: {fileID: 5258040574126288752}
+  - component: {fileID: 499302203}
   m_Layer: 6
   m_Name: Student
   m_TagString: Player
@@ -1196,6 +1197,34 @@ MonoBehaviour:
       - m_Target: {fileID: 372869891963435281}
         m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
         m_MethodName: SetAnimationEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &499302203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403148011924793229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487eae1a5012eeb409f5f4f141883a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 1d1bc7cadddde354994f4dc22fe32beb, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8869217043365130647}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: setPlayerState
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,18 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class Movement : MonoBehaviour
 {
-
+    [Header("Moving Parameters")]
     CharacterController controller;
     public float movementSpeed = 1f;
     public float runningFactor = 1.2f;
     public float positionClamp = 32f;
     public float rotationSpeed = 0.5f;
 
+    [Header("Jumping Parameters")]
     Vector3 velocity;
     public float gravity = -9.81f;
     public Transform groundCheck;
@@ -28,7 +31,7 @@ public class Movement : MonoBehaviour
     bool isWalking = false;
     bool isBacking = false;
     bool isRunning = false;
-
+    bool isActive = true;
 
 
 
@@ -42,6 +45,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (!isActive) { return; }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
@@ -95,20 +100,9 @@ public class Movement : MonoBehaviour
             if(isWalking == false)
             {
                 isWalking = true;
-                if (isRunning)
-                {
-                    animator.SetTrigger("Running");
-                }
-                else
-                {
-                    animator.SetTrigger("Walking");
-                }
-
-                
-               
+                animator.SetTrigger("Walking");
+             
             }
-            
-
         }
         else
         {
@@ -121,26 +115,27 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-
+            animator.SetBool("isRunning", true);
+            Debug.Log(animator.GetBool("isRunning"));
             isRunning = true;
 
         }else if(Input.GetKeyUp(KeyCode.LeftShift))
         {
+            animator.SetBool("isRunning", false);
             isRunning = false;
         }
-
-
-
         if (positionClamp != 0f)
         {
             transform.position = new Vector3(Mathf.Clamp(transform.position.x, -positionClamp, positionClamp), transform.position.y, Mathf.Clamp(transform.position.z, -positionClamp, positionClamp));
         }
-
-
-
-
-
-
-
     }
+
+   public void setPlayerState(Component sender, object data)
+    {
+        if(data is bool)
+        {
+            isActive = (bool)data;
+        }
+    }
+    
 }

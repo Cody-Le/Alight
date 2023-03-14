@@ -8477,6 +8477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnWakeUp: {fileID: 11400000, guid: e19569aaef415244f9312e9e2a243534, type: 2}
+  SetPlayerState: {fileID: 11400000, guid: 1d1bc7cadddde354994f4dc22fe32beb, type: 2}
 --- !u!65 &9002792141949278292
 BoxCollider:
   m_ObjectHideFlags: 0

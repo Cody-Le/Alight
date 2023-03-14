@@ -3209,6 +3209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animTrigger: {fileID: 11400000, guid: e19569aaef415244f9312e9e2a243534, type: 2}
+  setPlayerState: {fileID: 11400000, guid: 1d1bc7cadddde354994f4dc22fe32beb, type: 2}
+  setSubtitleText: {fileID: 11400000, guid: 2ff571bef37459a44a2718330390bac6, type: 2}
 --- !u!65 &989768295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5726,18 +5728,6 @@ PrefabInstance:
       propertyPath: m_RenderShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2017772732, guid: 618491ca05ee9164d99d1041d8c6989f, type: 3}
-      propertyPath: orthographic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2017772732, guid: 618491ca05ee9164d99d1041d8c6989f, type: 3}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2017772732, guid: 618491ca05ee9164d99d1041d8c6989f, type: 3}
-      propertyPath: orthographic size
-      value: 60.4
-      objectReference: {fileID: 0}
     - target: {fileID: 2017772733, guid: 618491ca05ee9164d99d1041d8c6989f, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5885,7 +5875,7 @@ PrefabInstance:
     - target: {fileID: 2820026970192537900, guid: 618491ca05ee9164d99d1041d8c6989f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2820026970192537901, guid: 618491ca05ee9164d99d1041d8c6989f,
         type: 3}

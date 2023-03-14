@@ -56,11 +56,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: -118.85
+  near clip plane: 0.01
   far clip plane: 129.65
   field of view: 60
   orthographic: 1
-  orthographic size: 261.1
+  orthographic size: 60.4
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -599,7 +599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2820026970192537901
 RectTransform:
   m_ObjectHideFlags: 0
