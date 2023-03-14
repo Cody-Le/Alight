@@ -8,7 +8,7 @@ public class Pickup : MonoBehaviour
 {
 
     public Vector3 pickableHalfExtent;
-    public GameObject holdingObject;
+
     public LayerMask pickableLayer;
     public GameObject Inventory;
     GameObject pickingObject;

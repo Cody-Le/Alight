@@ -2,21 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class clicked : MonoBehaviour
 {
-    public GameObject inventory;
+    public UnityEvent useItem;
+    private float timeFromFirstClick = 0f;
+    private bool isCounting = false;
+
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
-            if (inventory == null)
+            if (timeFromFirstClick == 0f)
             {
-                return;
+                isCounting = true;
             }
+            else
+            {
+                if(timeFromFirstClick < 1f)
+                {
+                    Debug.Log("DoubleClicked");
+                    useItem.Invoke();
+                }
+            }
+        }
 
-            inventory.GetComponent<Inventory>().ShowItemUse(this.gameObject);
+        if (isCounting)
+        {
+            timeFromFirstClick += Time.deltaTime;
+        }
 
+        if(timeFromFirstClick > 1f)
+        {
+            isCounting = false;
+            timeFromFirstClick = 0f;
         }
     }
 }

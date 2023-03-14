@@ -1103,7 +1103,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickableHalfExtent: {x: 2, y: 4, z: 4}
-  holdingObject: {fileID: 0}
   pickableLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1184,6 +1183,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1552545706275215574, guid: 026aa2c2b7267034faf68397f808c108,
+        type: 3}
+      propertyPath: Inventory
+      value: 
+      objectReference: {fileID: 1303774714}
     - target: {fileID: 1823281194699687028, guid: 026aa2c2b7267034faf68397f808c108,
         type: 3}
       propertyPath: m_RootOrder
@@ -1280,7 +1284,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2017772733, guid: 618491ca05ee9164d99d1041d8c6989f, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2820026969815218889, guid: 618491ca05ee9164d99d1041d8c6989f,
         type: 3}
@@ -1396,6 +1400,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820026970192537900, guid: 618491ca05ee9164d99d1041d8c6989f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820026970915136271, guid: 618491ca05ee9164d99d1041d8c6989f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 618491ca05ee9164d99d1041d8c6989f, type: 3}

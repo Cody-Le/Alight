@@ -6,16 +6,19 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    [Header("Display Items")]
     public float spaceBetweenItem = 10f;
     public float scrollSpeed = 100f;
     public Transform startingPosition;
-
-    public GameObject ItemUseMenu;
     private float scrollValue = 0f;
+
+ 
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-        ItemUseMenu.SetActive(false);    
+      
     }
 
     // Update is called once per frame
@@ -31,21 +34,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void ShowItemUse(GameObject obj)
-    {
-        if (ItemUseMenu.active)
-        {
-            ItemUseMenu.SetActive(false);
-        }
-        else
-        {
-         
-            ItemUseMenu.SetActive(true);
-            ItemUseMenu.transform.position = Input.mousePosition;
-        }
-       
-    }
-
+ 
 
 
 

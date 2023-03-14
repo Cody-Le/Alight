@@ -981,7 +981,8 @@ GameObject:
   - component: {fileID: 6107086578009013028}
   - component: {fileID: 4482569870907373017}
   - component: {fileID: 1552545706275215574}
-  - component: {fileID: 935283561562801290}
+  - component: {fileID: 372869891963435281}
+  - component: {fileID: 5258040574126288752}
   m_Layer: 6
   m_Name: Student
   m_TagString: Player
@@ -1061,6 +1062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1.2
+  runningFactor: 2
   positionClamp: 0
   rotationSpeed: 80
   gravity: -50
@@ -1115,7 +1117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickableHalfExtent: {x: 4, y: 10, z: 4}
-  holdingObject: {fileID: 0}
   pickableLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1135,7 +1136,7 @@ MonoBehaviour:
   InventoryOn:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 935283561562801290}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerState, Assembly-CSharp
         m_MethodName: DisablePlayer
         m_Mode: 1
@@ -1150,7 +1151,7 @@ MonoBehaviour:
   InventoryOff:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 935283561562801290}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerState, Assembly-CSharp
         m_MethodName: EnablePlayer
         m_Mode: 1
@@ -1163,7 +1164,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Inventory: {fileID: 0}
---- !u!114 &935283561562801290
+--- !u!114 &372869891963435281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1172,9 +1173,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 5403148011924793229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9c38205cf9dc740b598abf6eee6998, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a64a2088af8c2a499a1c06e3c491444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animController: {fileID: 872986854121354560}
+--- !u!114 &5258040574126288752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403148011924793229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487eae1a5012eeb409f5f4f141883a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: e19569aaef415244f9312e9e2a243534, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 372869891963435281}
+        m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+        m_MethodName: SetAnimationEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5518182161027869189
 GameObject:
   m_ObjectHideFlags: 0
