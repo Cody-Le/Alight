@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Vending : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Vending : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 onChangeText.Raise(this, "At the time, I only had five dollars, just enough for a water.");
+
             }
         }
     }
@@ -33,6 +35,9 @@ public class Vending : MonoBehaviour
         {
           
             onChangeText.Raise(this, "");
+
+            SceneManager.LoadScene("Vending_cutscene");
+
         }
     }
 

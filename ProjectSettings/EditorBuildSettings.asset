@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vending.unity
     guid: 33c8057d7cf115841a47d55b5a29d18f
+  - enabled: 1
+    path: Assets/Scenes/CutScene/Vending/Vending_cutscene.unity
+    guid: a60c8cc46433fdc46899bb9d0ac3a171
   m_configObjects: {}

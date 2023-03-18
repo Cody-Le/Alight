@@ -14,4 +14,7 @@ public class AnimationScript : MonoBehaviour
             animController.SetTrigger(trigger);
         }
     }
+
+
+
 }
