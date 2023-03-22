@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MaterialTimeline : MonoBehaviour
 {
+    public Material material;
+
+
     // Start is called before the first frame update
     void Start()
     {
