@@ -1,0 +1,22 @@
+{
+    "Banana": {
+
+        "position": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        },
+        "isBagged": false,
+        "storyState": 0
+    },
+    "Berry": {
+
+        "position": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        },
+        "isBagged": true,
+        "storyState": 0
+    }
+}

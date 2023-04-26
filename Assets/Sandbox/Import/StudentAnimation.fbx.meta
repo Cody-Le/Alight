@@ -1,46 +1,33 @@
 fileFormatVersion: 2
-guid: 68d39fa659dc05d41a9e2ca6ac3d46d0
+guid: 56bd31b871963394cba07f22fe1ae9fa
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: -3943185398152441266
-    second: PuppetEmi|Emi|Emi|CameraAction
+      74: -3260308323926973348
+    second: Emi|CameraAction
   - first:
-      74: 743106471074424394
-    second: PuppetEmi|Emi|Emi|CameraAction.001
+      74: -4011209245651169880
+    second: Emi|Cube.002Action
   - first:
-      74: -146920822293108480
-    second: PuppetEmi|Sitfall
+      74: 670411219708760298
+    second: Emi|Cube.009Action.001
   - first:
-      74: -482643419627522765
-    second: PuppetEmi|Sitting
-  externalObjects:
+      74: 1725829028140088643
+    second: Emi|Idle
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hair
-    second: {fileID: 2100000, guid: de6dd20c4e64c6941a0b55f5aed1e0f6, type: 2}
+      74: 2032876912920015368
+    second: Emi|LookClock
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal
-    second: {fileID: 2100000, guid: cb91ca9f0734e504fb9e7f6d1bee4cfe, type: 2}
+      74: 3671797151301406972
+    second: Emi|Plane.001Action.001
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Shirt
-    second: {fileID: 2100000, guid: 004c036ac89112e4b875a5c44b1243b5, type: 2}
+      74: 2335399056781919355
+    second: Emi|WakingUp
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Shirt.001
-    second: {fileID: 2100000, guid: 004c036ac89112e4b875a5c44b1243b5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wooden
-    second: {fileID: 2100000, guid: 981ca98424505cd44afa66c7532ef76f, type: 2}
+      74: -2434928980618107307
+    second: Emi|Walk
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
