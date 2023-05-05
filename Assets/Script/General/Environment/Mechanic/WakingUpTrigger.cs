@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WakingUpTrigger : MonoBehaviour
 {
@@ -8,8 +9,14 @@ public class WakingUpTrigger : MonoBehaviour
     public GameEvent SetPlayerState;
     private void Start()
     {
-        OnWakeUp.Raise(this, "WakeUp");
-        StartCoroutine(controlFreeze());
+        
+        if (!saveSystem.CheckStoryState(SceneManager.GetActiveScene().buildIndex))
+        {
+            OnWakeUp.Raise(this, "WakeUp");
+            StartCoroutine(controlFreeze());
+            saveSystem.SaveStoryState(1, SceneManager.GetActiveScene().buildIndex);
+        }
+        
     }
 
     IEnumerator controlFreeze()

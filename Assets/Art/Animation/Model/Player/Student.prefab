@@ -984,6 +984,7 @@ GameObject:
   - component: {fileID: 372869891963435281}
   - component: {fileID: 5258040574126288752}
   - component: {fileID: 499302203}
+  - component: {fileID: 4073506232549727071}
   m_Layer: 6
   m_Name: Student
   m_TagString: Player
@@ -1234,6 +1235,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4073506232549727071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403148011924793229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66919efdc52a82c4fa1fd987695f7a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadMemory: 0
 --- !u!1 &5518182161027869189
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraChange : MonoBehaviour
+public class cameraSwitch : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -12,7 +12,7 @@ public class CameraChange : MonoBehaviour
     void Start()
     {
         allCameras = GameObject.FindGameObjectsWithTag("MainCamera");
-        Debug.Log(allCameras.Length);
+ 
         
     }
 

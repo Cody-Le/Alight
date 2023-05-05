@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NMDoorTransition : MonoBehaviour
+public class Door_transition : MonoBehaviour
 {
 
 
     public int sceneIndex;
-    // Start is called before the first frame update
+    public bool savePlayer = false;
     bool playerInCollider = false;
-    void Start()
-    {
-        
-    }
+    GameObject Player;
 
     // Update is called once per frame
     void Update()
@@ -22,6 +19,11 @@ public class NMDoorTransition : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                
+                if (savePlayer)
+                {
+                    saveSystem.SavePlayer(Player, SceneManager.GetActiveScene().buildIndex);
+                }
                 SceneManager.LoadScene(sceneIndex);
             }
         }
@@ -35,6 +37,7 @@ public class NMDoorTransition : MonoBehaviour
         if(other.tag == "Player")
         {
             playerInCollider = true;
+            Player = other.gameObject;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -42,6 +45,7 @@ public class NMDoorTransition : MonoBehaviour
         if (other.tag == "Player")
         {
             playerInCollider = false;
+            Player = null;
         }
     }
 }

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PassiveDoor : MonoBehaviour
+public class Door_passive : MonoBehaviour
 {
 
 
     public int sceneIndex;
-    // Start is called before the first frame update
+    public bool savePlayer = false;
     bool playerInCollider = false;
+    GameObject Player;
     void Start()
     {
         
@@ -20,7 +21,12 @@ public class PassiveDoor : MonoBehaviour
     {
         if (playerInCollider)
         {
+            if (savePlayer)
+            {
+                saveSystem.SavePlayer(Player, SceneManager.GetActiveScene().buildIndex);
+            }
             SceneManager.LoadScene(sceneIndex);
+            
         }
 
 
@@ -32,6 +38,7 @@ public class PassiveDoor : MonoBehaviour
         if(other.tag == "Player")
         {
             playerInCollider = true;
+            Player = other.gameObject;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -39,6 +46,7 @@ public class PassiveDoor : MonoBehaviour
         if (other.tag == "Player")
         {
             playerInCollider = false;
+            Player = null;
         }
     }
 }
