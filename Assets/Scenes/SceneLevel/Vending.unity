@@ -2087,13 +2087,60 @@ Transform:
   m_Father: {fileID: 1449957706}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &567614649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2820026969815218889, guid: 618491ca05ee9164d99d1041d8c6989f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6374871171364111315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &567614654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567614649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba6b343b7224e348a20f5ad7cc65455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inventory: {fileID: 764927288}
+--- !u!114 &567614655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567614649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487eae1a5012eeb409f5f4f141883a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: cbf33e2214647f84d92aefc9306ad681, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 567614654}
+        m_TargetAssemblyTypeName: InventoryHandler, Assembly-CSharp
+        m_MethodName: inventoryController
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!43 &570074787
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27484
+  m_Name: pb_Mesh43204
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3219,9 +3266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d8c882c2bec49479927df49754ff55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animTrigger: {fileID: 11400000, guid: e19569aaef415244f9312e9e2a243534, type: 2}
-  setPlayerState: {fileID: 11400000, guid: 1d1bc7cadddde354994f4dc22fe32beb, type: 2}
-  setSubtitleText: {fileID: 11400000, guid: 2ff571bef37459a44a2718330390bac6, type: 2}
 --- !u!65 &989768295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3722,7 +3766,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27748
+  m_Name: pb_Mesh50688
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4346,7 +4390,7 @@ PrefabInstance:
     - target: {fileID: 972442204535147749, guid: d21d8cf790c07e54395e62ad3946c438,
         type: 3}
       propertyPath: m_Size.z
-      value: 13.551788
+      value: 9.273254
       objectReference: {fileID: 0}
     - target: {fileID: 972442204535147749, guid: d21d8cf790c07e54395e62ad3946c438,
         type: 3}
@@ -4356,7 +4400,7 @@ PrefabInstance:
     - target: {fileID: 972442204535147749, guid: d21d8cf790c07e54395e62ad3946c438,
         type: 3}
       propertyPath: m_Center.z
-      value: -2.1214752
+      value: -4.260742
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d21d8cf790c07e54395e62ad3946c438, type: 3}
@@ -4366,7 +4410,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1656
+  m_Name: pb_Mesh-113126
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5056,7 +5100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onChangeText: {fileID: 11400000, guid: 2ff571bef37459a44a2718330390bac6, type: 2}
-  playerInZone: 0
 --- !u!1 &1911754485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5999,6 +6042,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5905201590077728539, guid: 618491ca05ee9164d99d1041d8c6989f,
+        type: 3}
+      propertyPath: bottle
+      value: 
+      objectReference: {fileID: 2654362314006775428, guid: 874f2ce404e984b48b85ab2999f1c370,
+        type: 3}
     - target: {fileID: 6374871173201240066, guid: 618491ca05ee9164d99d1041d8c6989f,
         type: 3}
       propertyPath: m_RootOrder
@@ -6009,6 +6058,12 @@ PrefabInstance:
       propertyPath: m_text
       value: Double click to use item
       objectReference: {fileID: 0}
+    - target: {fileID: 8341899840737925979, guid: 618491ca05ee9164d99d1041d8c6989f,
+        type: 3}
+      propertyPath: inventoryEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: cbf33e2214647f84d92aefc9306ad681,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 2820026969815218930, guid: 618491ca05ee9164d99d1041d8c6989f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 618491ca05ee9164d99d1041d8c6989f, type: 3}
@@ -6206,6 +6261,11 @@ PrefabInstance:
       propertyPath: Inventory
       value: 
       objectReference: {fileID: 764927288}
+    - target: {fileID: 4073506232549727071, guid: 026aa2c2b7267034faf68397f808c108,
+        type: 3}
+      propertyPath: loadMemory
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5403148011924793229, guid: 026aa2c2b7267034faf68397f808c108,
         type: 3}
       propertyPath: m_Name

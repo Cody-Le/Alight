@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class clicked : MonoBehaviour
 {
     public UnityEvent useItem;
+    public GameEvent inventoryEvent;
     private float timeFromFirstClick = 0f;
     private bool isCounting = false;
 
@@ -24,6 +25,7 @@ public class clicked : MonoBehaviour
                 {
                     Debug.Log("DoubleClicked");
                     useItem.Invoke();
+                    inventoryEvent.Raise(this,false);
                 }
             }
         }

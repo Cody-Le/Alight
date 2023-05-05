@@ -74,7 +74,7 @@ public static class saveSystem
 
     }
 
-    public static playerState LoadStoryState(int scene)
+    public static storyState LoadStoryState(int scene)
     {
         string path = Application.persistentDataPath + "/storyState_scene_" + scene.ToString() + ".algt";
         if (!File.Exists(path))
@@ -85,7 +85,7 @@ public static class saveSystem
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream stream = new FileStream(path, FileMode.Open);
 
-        playerState data = formatter.Deserialize(stream) as playerState;
+        storyState data = formatter.Deserialize(stream) as storyState;
         stream.Close();
 
         return data;

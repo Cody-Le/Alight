@@ -24,8 +24,24 @@ public class vending : MonoBehaviour
     {
        if (other.tag == "Player")
        {
-            playerInZone = true;
-            onChangeText.Raise(this, "[TAB] to look at inventory");
+            if (saveSystem.CheckStoryState(SceneManager.GetActiveScene().buildIndex))
+            {
+                storyState state = saveSystem.LoadStoryState(SceneManager.GetActiveScene().buildIndex);
+                if (state.state == 0)
+                {
+                    playerInZone = true;
+                    onChangeText.Raise(this, "[TAB] to look at inventory");
+                }
+            }
+            else
+            {
+                playerInZone = true;
+                onChangeText.Raise(this, "[TAB] to look at inventory");
+            }
+            
+            
+
+            
        }
     }
 
@@ -36,8 +52,7 @@ public class vending : MonoBehaviour
           
             onChangeText.Raise(this, "");
 
-            SceneManager.LoadScene("Vending_cutscene");
-
+            
         }
     }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Money : MonoBehaviour
+public class money : MonoBehaviour
 {
 
     public GameObject bottle;
@@ -14,6 +14,6 @@ public class Money : MonoBehaviour
         if(Player == null) { return; }
         if(bottle == null) { return; }
         Debug.LogError("Bought Bottle");
-        Instantiate(bottle, Player);
+        Instantiate(bottle);
     }
 }

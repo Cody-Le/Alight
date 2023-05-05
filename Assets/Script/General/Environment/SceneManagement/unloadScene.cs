@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UnloadScene : MonoBehaviour
+public class unloadScene : MonoBehaviour
 {
     public string sceneName;
     private void OnEnable()
     {
-        SceneManager.UnloadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 }
