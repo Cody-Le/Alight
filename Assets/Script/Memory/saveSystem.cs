@@ -48,6 +48,30 @@ public static class saveSystem
 
     }
 
+
+    public static void ResetAllPlayerState()
+    {
+        string path = Application.persistentDataPath;
+        string[] files = System.IO.Directory.GetFiles(path, "player_scene_*.algt");
+        if (files.Length > 0)
+        {
+            foreach(string file in files)
+            {
+                File.Delete(file);
+            }
+        }
+    }
+
+    public static void ResetOnePlayerState(int scene)
+    {
+        string path = Application.persistentDataPath + "/player_scene_" + scene.ToString() + ".algt";
+        
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+    }
+
     public static bool CheckPlayerState(int scene)
     {
         string path = Application.persistentDataPath + "/player_scene_" + scene.ToString() + ".algt";
@@ -93,9 +117,77 @@ public static class saveSystem
 
     }
 
+
+    public static void ResetAllStoryState()
+    {
+        string path = Application.persistentDataPath;
+        string[] files = System.IO.Directory.GetFiles(path, "story_scene_*.algt");
+        if (files.Length > 0)
+        {
+            foreach (string file in files)
+            {
+                File.Delete(file);
+            }
+        }
+    }
+
+    public static void ResetOneStoryState(int scene)
+    {
+        string path = Application.persistentDataPath + "/story_scene_" + scene.ToString() + ".algt";
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+    }
+
     public static bool CheckStoryState(int scene)
     {
         string path = Application.persistentDataPath + "/storyState_scene_" + scene.ToString() + ".algt";
+        return File.Exists(path);
+    }
+
+
+    //Functions to handle the general state of the game (i.e. which level were at, played before?, )
+    public static void SaveGameState(int level)
+    {
+
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        string path = Application.persistentDataPath + "/gameState_scene.algt";
+        Debug.Log(path);
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        gameState data = new gameState(level);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+
+
+    }
+
+    public static gameState LoadGameState()
+    {
+        string path = Application.persistentDataPath + "/gameState_scene.algt";
+        if (!File.Exists(path))
+        {
+            Debug.LogError("Save File not found in" + path);
+            return null;
+        }
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(path, FileMode.Open);
+
+        gameState data = formatter.Deserialize(stream) as gameState;
+        stream.Close();
+
+        return data;
+
+
+    }
+
+    public static bool CheckGameState()
+    {
+        string path = Application.persistentDataPath + "/storyState_scene.algt";
         return File.Exists(path);
     }
 
