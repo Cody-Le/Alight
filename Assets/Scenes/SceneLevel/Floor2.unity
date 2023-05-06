@@ -1200,7 +1200,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33138
+  m_Name: pb_Mesh36906
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1480,6 +1480,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4073506232549727071, guid: 026aa2c2b7267034faf68397f808c108,
+        type: 3}
+      propertyPath: loadMemory
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5403148011924793229, guid: 026aa2c2b7267034faf68397f808c108,
         type: 3}
       propertyPath: m_Name
@@ -3709,6 +3714,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PassiveDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399049510222321992, guid: b69932e9ed882ed48bd754efffd9d102,
+        type: 3}
+      propertyPath: sceneName
+      value: Floor1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399049510222321992, guid: b69932e9ed882ed48bd754efffd9d102,
+        type: 3}
+      propertyPath: savePlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6399049510222321992, guid: b69932e9ed882ed48bd754efffd9d102,
         type: 3}
@@ -6117,7 +6132,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33292
+  m_Name: pb_Mesh37062
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

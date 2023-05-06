@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Door_anim : MonoBehaviour
 {
 
-    public int SceneIndex;
+    public string sceneName;
     public Animator ani_controller;
     bool isOpen = false;
     public bool savePlayer = false;
@@ -30,7 +30,7 @@ public class Door_anim : MonoBehaviour
                     ani_controller.SetTrigger("DoorOpen");
                     isOpen = true;
                 }
-                if(SceneIndex != -1)
+                if(sceneName != "")
                 {
                     
                     if (savePlayer)
@@ -38,7 +38,15 @@ public class Door_anim : MonoBehaviour
                         Player = GameObject.FindGameObjectWithTag("Player");
                         saveSystem.SavePlayer(Player, SceneManager.GetActiveScene().buildIndex);
                     }
-                    SceneManager.LoadScene(SceneIndex);
+                    
+                    if (SceneManager.GetSceneByName(sceneName).IsValid())
+                    {
+                        SceneManager.LoadScene(sceneName);
+                    }
+                    else
+                    {
+                        Debug.LogError("Scene " + sceneName + " is not a valid scene, therefore is not loaded");
+                    }
                 }
             }
         }

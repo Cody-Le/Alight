@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Door_passive : MonoBehaviour
+public class Door_passiveTransition : MonoBehaviour
 {
 
 
-    public int sceneIndex;
+    public string sceneName;
     public bool savePlayer = false;
     bool playerInCollider = false;
     GameObject Player;
@@ -25,8 +25,9 @@ public class Door_passive : MonoBehaviour
             {
                 saveSystem.SavePlayer(Player, SceneManager.GetActiveScene().buildIndex);
             }
-            SceneManager.LoadScene(sceneIndex);
-            
+            if (sceneName == "") { return; }
+            SceneManager.LoadScene(sceneName);
+
         }
 
 

@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneLevel/Floor2.unity
     guid: e1bcef72ebe3b654ea92864877c780ac
   - enabled: 1
-    path: Assets/Scenes/SceneLevel/Floor 1.unity
+    path: Assets/Scenes/SceneLevel/Floor1.unity
     guid: b730f39aabc18a249a74e7a9110913d7
   - enabled: 1
     path: Assets/Scenes/SceneLevel/Vending.unity

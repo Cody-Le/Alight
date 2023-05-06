@@ -7,7 +7,8 @@ public class Door_transition : MonoBehaviour
 {
 
 
-    public int sceneIndex;
+    
+    public string sceneName;
     public bool savePlayer = false;
     bool playerInCollider = false;
     GameObject Player;
@@ -24,7 +25,20 @@ public class Door_transition : MonoBehaviour
                 {
                     saveSystem.SavePlayer(Player, SceneManager.GetActiveScene().buildIndex);
                 }
-                SceneManager.LoadScene(sceneIndex);
+
+                if(sceneName == "") { return; }
+
+                SceneManager.LoadScene(sceneName);
+
+                if (SceneManager.GetSceneByName(sceneName).IsValid())
+                {
+                    SceneManager.LoadScene(sceneName);
+                }
+                else
+                {
+                    Debug.LogError("Scene " + sceneName + " is not a valid scene, therefore is not loaded");
+                }
+                
             }
         }
 
