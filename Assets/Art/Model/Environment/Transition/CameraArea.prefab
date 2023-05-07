@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 972442203183537570}
   - component: {fileID: 972442203183537569}
-  - component: {fileID: 972442203183537568}
   - component: {fileID: 972442203183537571}
   - component: {fileID: 7192898384911173806}
   m_Layer: 6
@@ -78,14 +77,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &972442203183537568
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972442203183537583}
-  m_Enabled: 1
 --- !u!114 &972442203183537571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,11 +123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickableHalfExtent: {x: 2, y: 4, z: 4}
-  holdingObject: {fileID: 0}
   pickableLayer:
     serializedVersion: 2
     m_Bits: 128
-  holdingOffSet: {x: 0, y: 0, z: 0}
+  Inventory: {fileID: 0}
 --- !u!1 &972442204535147746
 GameObject:
   m_ObjectHideFlags: 0

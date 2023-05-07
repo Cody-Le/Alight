@@ -30,14 +30,7 @@ public class Door_transition : MonoBehaviour
 
                 SceneManager.LoadScene(sceneName);
 
-                if (SceneManager.GetSceneByName(sceneName).IsValid())
-                {
-                    SceneManager.LoadScene(sceneName);
-                }
-                else
-                {
-                    Debug.LogError("Scene " + sceneName + " is not a valid scene, therefore is not loaded");
-                }
+               
                 
             }
         }

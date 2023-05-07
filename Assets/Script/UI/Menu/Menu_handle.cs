@@ -7,15 +7,18 @@ public class Menu_handle : MonoBehaviour
 {
     public void NewGame()
     {
-        saveSystem.SaveGameState(1);
+        saveSystem.ResetAllPlayerState();
+        saveSystem.ResetAllStoryState();
+        saveSystem.SaveGameState("Classroom");
+        
         SceneManager.LoadScene("Classroom");
     }
 
     public void ContinueGame()
     {
-        if (!saveSystem.CheckGameState()) { return; }
+        if (!saveSystem.CheckGameState()) {Debug.LogWarning("No Game State have been save"); return; }
         gameState level = saveSystem.LoadGameState();
-        SceneManager.LoadScene(level.level);
+        SceneManager.LoadScene(level.levelName);
     }
 
     public void Settngs()

@@ -7,11 +7,11 @@ using UnityEngine;
 [System.Serializable]
 public class gameState 
 {
-    public int level;
+    public string levelName;
 
-    public gameState(int level)
+    public gameState(string level)
     {
-        level = level;
+        levelName = level;
     }
 
 

@@ -57,6 +57,7 @@ public static class saveSystem
         {
             foreach(string file in files)
             {
+                Debug.Log(file);
                 File.Delete(file);
             }
         }
@@ -121,11 +122,12 @@ public static class saveSystem
     public static void ResetAllStoryState()
     {
         string path = Application.persistentDataPath;
-        string[] files = System.IO.Directory.GetFiles(path, "story_scene_*.algt");
+        string[] files = System.IO.Directory.GetFiles(path, "storyState_scene_*.algt");
         if (files.Length > 0)
         {
             foreach (string file in files)
             {
+                Debug.Log(file);
                 File.Delete(file);
             }
         }
@@ -133,7 +135,7 @@ public static class saveSystem
 
     public static void ResetOneStoryState(int scene)
     {
-        string path = Application.persistentDataPath + "/story_scene_" + scene.ToString() + ".algt";
+        string path = Application.persistentDataPath + "/storyState_scene_" + scene.ToString() + ".algt";
 
         if (File.Exists(path))
         {
@@ -149,12 +151,12 @@ public static class saveSystem
 
 
     //Functions to handle the general state of the game (i.e. which level were at, played before?, )
-    public static void SaveGameState(int level)
+    public static void SaveGameState(string level)
     {
 
         BinaryFormatter formatter = new BinaryFormatter();
 
-        string path = Application.persistentDataPath + "/gameState_scene.algt";
+        string path = Application.persistentDataPath + "/gameState.algt";
         Debug.Log(path);
         FileStream stream = new FileStream(path, FileMode.Create);
 
@@ -168,7 +170,7 @@ public static class saveSystem
 
     public static gameState LoadGameState()
     {
-        string path = Application.persistentDataPath + "/gameState_scene.algt";
+        string path = Application.persistentDataPath + "/gameState.algt";
         if (!File.Exists(path))
         {
             Debug.LogError("Save File not found in" + path);
@@ -187,7 +189,7 @@ public static class saveSystem
 
     public static bool CheckGameState()
     {
-        string path = Application.persistentDataPath + "/storyState_scene.algt";
+        string path = Application.persistentDataPath + "/gameState.algt";
         return File.Exists(path);
     }
 
