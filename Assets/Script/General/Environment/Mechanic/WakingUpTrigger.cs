@@ -16,6 +16,10 @@ public class WakingUpTrigger : MonoBehaviour
             StartCoroutine(controlFreeze());
             saveSystem.SaveStoryState(1, SceneManager.GetActiveScene().buildIndex);
         }
+        else
+        {
+            OnWakeUp.Raise(this, "Idling");
+        }
         
     }
 

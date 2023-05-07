@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1.2
-  runningFactor: 2
+  runningFactor: 4.2
   positionClamp: 0
   rotationSpeed: 80
   gravity: -50
