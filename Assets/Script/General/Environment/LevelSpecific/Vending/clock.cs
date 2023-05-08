@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Clock : MonoBehaviour
+public class clock : MonoBehaviour
 {
     public GameEvent animTrigger;
     public GameEvent setPlayerState;

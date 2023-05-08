@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextScene : MonoBehaviour
+public class nextScene : MonoBehaviour
 {
     //Change on scene activation
     public string sceneName;

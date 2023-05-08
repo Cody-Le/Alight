@@ -979,12 +979,11 @@ GameObject:
   - component: {fileID: 8869217043365130647}
   - component: {fileID: 936641344037677482}
   - component: {fileID: 6107086578009013028}
-  - component: {fileID: 4482569870907373017}
-  - component: {fileID: 1552545706275215574}
   - component: {fileID: 372869891963435281}
   - component: {fileID: 5258040574126288752}
   - component: {fileID: 499302203}
   - component: {fileID: 4073506232549727071}
+  - component: {fileID: 302559807102029478}
   m_Layer: 6
   m_Name: Emi
   m_TagString: Player
@@ -1106,66 +1105,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.61589575, y: 2.1002624, z: 0.30493474}
   m_Center: {x: 0.0035395634, y: 0.003658414, z: -0.180916}
---- !u!114 &4482569870907373017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5403148011924793229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64877313f87d5e94b9edc1afb62545d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickableHalfExtent: {x: 4, y: 10, z: 4}
-  pickableLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  Inventory: {fileID: 0}
---- !u!114 &1552545706275215574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5403148011924793229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d84cbf3597e1f2746a6e69dcc15e0e64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InventoryOn:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerState, Assembly-CSharp
-        m_MethodName: DisablePlayer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  InventoryOff:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerState, Assembly-CSharp
-        m_MethodName: EnablePlayer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Inventory: {fileID: 0}
 --- !u!114 &372869891963435281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,6 +1187,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadMemory: 0
+--- !u!114 &302559807102029478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403148011924793229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6c803d2246597419c4676a95f235cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInventoryEvent: {fileID: 11400000, guid: cbf33e2214647f84d92aefc9306ad681, type: 2}
+  OnEscScreen: {fileID: 11400000, guid: 189f1a67e43575645874994b7c1348db, type: 2}
+  Inventory_on: 0
+  EscScreen_on: 0
 --- !u!1 &5518182161027869189
 GameObject:
   m_ObjectHideFlags: 0

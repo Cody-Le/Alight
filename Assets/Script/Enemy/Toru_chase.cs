@@ -6,7 +6,7 @@ using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ToruChase : MonoBehaviour
+public class Toru_chase : MonoBehaviour
 {
 
 

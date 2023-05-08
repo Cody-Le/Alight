@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontUnload : MonoBehaviour
+public class dontUnload : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class ChaseExit: MonoBehaviour
+public class chaseExit: MonoBehaviour
 {
     public PlayableDirector busAnimation;
     public GameObject Enemy;
