@@ -1676,7 +1676,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34578
+  m_Name: pb_Mesh27470
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4937,7 +4937,7 @@ PrefabInstance:
     - target: {fileID: 3720486091283226735, guid: 618491ca05ee9164d99d1041d8c6989f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4369045824768858491, guid: 618491ca05ee9164d99d1041d8c6989f,
         type: 3}
@@ -6542,6 +6542,100 @@ Transform:
   m_Father: {fileID: 5568124426837819036}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6212705343820645922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6212705343881421652, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: Pan2D
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421652, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 2.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421652, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: Priority
+      value: 133
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421652, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.036
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421652, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.052
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.027996063
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.4824104
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 358.4061
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421653, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212705343881421655, guid: 8a9b55855bb37bc4aaeee074dfc2319b,
+        type: 3}
+      propertyPath: m_Name
+      value: BackgroundAudio
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8a9b55855bb37bc4aaeee074dfc2319b, type: 3}
 --- !u!23 &6513464489816640248
 MeshRenderer:
   m_ObjectHideFlags: 0

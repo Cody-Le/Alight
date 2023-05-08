@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 972442203183537570}
   - component: {fileID: 972442203183537569}
   - component: {fileID: 972442203183537571}
-  - component: {fileID: 7192898384911173806}
+  - component: {fileID: 8156106735952695227}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -110,23 +110,14 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &7192898384911173806
-MonoBehaviour:
+--- !u!81 &8156106735952695227
+AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972442203183537583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64877313f87d5e94b9edc1afb62545d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickableHalfExtent: {x: 2, y: 4, z: 4}
-  pickableLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  Inventory: {fileID: 0}
+  m_Enabled: 0
 --- !u!1 &972442204535147746
 GameObject:
   m_ObjectHideFlags: 0

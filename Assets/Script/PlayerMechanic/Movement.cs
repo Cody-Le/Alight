@@ -28,9 +28,9 @@ public class Movement : MonoBehaviour
     public float jumpHeight = 2f;
 
     bool isGrounded = false;
-    bool isWalking = false;
+    [HideInInspector] public bool isWalking = false;
     bool isBacking = false;
-    bool isRunning = false;
+    [HideInInspector]public bool isRunning = false;
     bool isActive = true;
 
 
@@ -116,7 +116,6 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             animator.SetBool("isRunning", true);
-            Debug.Log(animator.GetBool("isRunning"));
             isRunning = true;
 
         }else if(Input.GetKeyUp(KeyCode.LeftShift))

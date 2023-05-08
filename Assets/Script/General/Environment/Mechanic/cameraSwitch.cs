@@ -26,10 +26,12 @@ public class cameraSwitch : MonoBehaviour
             {
                 foreach(GameObject cam in allCameras)
                 {
+                    cam.GetComponent<AudioListener>().enabled = false;  
                     cam.SetActive(false);
                 }
             }
             childCamera.gameObject.SetActive(true);
+            childCamera.gameObject.GetComponent<AudioListener>().enabled = true;    
             
         }
     }
