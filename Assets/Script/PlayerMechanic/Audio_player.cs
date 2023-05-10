@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,6 +16,7 @@ public class Audio_player : MonoBehaviour
     [Header("AudioSources")]
     public AudioClip woodStep;
     public AudioClip concreteStep;
+    public int audioMaterial;
 
     [Header("Walk Parameters")]
     public float w_offset;
@@ -28,14 +30,28 @@ public class Audio_player : MonoBehaviour
     bool isWalking;
     bool isRunning;
 
+
+    
+
     void Start()
     {
         Player = this.gameObject;
         movementController = this.GetComponent<Movement>();
         source = this.GetComponent<AudioSource>();
+        isWalking = false;
+        isRunning = false;
         if(Player.tag != "Player")
         {
             Debug.LogError("Component Audio_player is not attached to a player gameObject");
+        }
+
+        if(audioMaterial == 0)
+        {
+            source.clip = woodStep;
+        }
+        else
+        {
+            source.clip = concreteStep;
         }
 
 
@@ -53,8 +69,8 @@ public class Audio_player : MonoBehaviour
         }
         else if(!movementController.isWalking)
         {
-            StopCoroutine(soundRoutine);
-            isWalking=false;
+            if (soundRoutine != null) { StopCoroutine(soundRoutine); }
+            isWalking =false;
             
         }
 
@@ -62,7 +78,7 @@ public class Audio_player : MonoBehaviour
         {
             if (isWalking)
             {
-                StopCoroutine(soundRoutine);
+                if (soundRoutine != null) { StopCoroutine(soundRoutine); }
             }
 
             soundRoutine = runRoutine();
@@ -73,13 +89,14 @@ public class Audio_player : MonoBehaviour
         {
             if (isWalking)
             {
-                StopCoroutine(soundRoutine);
+                if(soundRoutine != null) { StopCoroutine(soundRoutine); }
+                
                 soundRoutine = walkRoutine();
                 StartCoroutine(soundRoutine);
             }
             else
             {
-                StopCoroutine(soundRoutine);
+                if (soundRoutine != null) { StopCoroutine(soundRoutine); }
             }
 
             isRunning = false;
@@ -92,7 +109,7 @@ public class Audio_player : MonoBehaviour
 
     IEnumerator walkRoutine()
     {
-        source.clip = woodStep;
+      
         yield return new WaitForSeconds(w_offset);
         while (true)
         {
@@ -104,7 +121,7 @@ public class Audio_player : MonoBehaviour
 
     IEnumerator runRoutine()
     {
-        source.clip = woodStep;
+        
         yield return new WaitForSeconds(r_offset);
         while (true)
         {

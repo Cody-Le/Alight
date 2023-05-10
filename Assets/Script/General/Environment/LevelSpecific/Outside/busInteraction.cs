@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class busInteract : MonoBehaviour
+public class busInteraction : MonoBehaviour
 {
     public GameEvent onSubtitle;
     public PlayableDirector playerBus;
