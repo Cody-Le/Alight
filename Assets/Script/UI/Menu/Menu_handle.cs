@@ -10,7 +10,7 @@ public class Menu_handle : MonoBehaviour
         saveSystem.ResetAllPlayerState();
         saveSystem.ResetAllStoryState();
         saveSystem.SaveGameState("Classroom");
-        
+        saveSystem.ResetBagState();
         SceneManager.LoadScene("Classroom");
     }
 

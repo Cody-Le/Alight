@@ -25,7 +25,8 @@ public class clicked : MonoBehaviour
                 {
                     Debug.Log("DoubleClicked");
                     useItem.Invoke();
-                    inventoryEvent.Raise(this,false);
+                    if(inventoryEvent != null) { inventoryEvent.Raise(this, false); }
+                    
                 }
             }
         }

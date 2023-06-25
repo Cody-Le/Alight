@@ -6,7 +6,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class saveSystem
 {
-
+    private static void SaveData(string path, object data, System.Type type)
+    {
+        
+    }
 
 
     //Static Function on saving, loading and performing check on the path of the characters
@@ -191,6 +194,60 @@ public static class saveSystem
     {
         string path = Application.persistentDataPath + "/gameState.algt";
         return File.Exists(path);
+    }
+
+    // Save system for bag state
+    public static void SaveBag(bool state)
+    {
+
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        string path = Application.persistentDataPath + "/bag.algt";
+        Debug.Log(path);
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        bagState data = new bagState(state);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+
+
+    }
+
+    public static bagState LoadBagState()
+    {
+        string path = Application.persistentDataPath + "/bag.algt";
+        if (!File.Exists(path))
+        {
+            Debug.LogError("Save File not found in" + path);
+            return new bagState(false);
+        }
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(path, FileMode.Open);
+
+        bagState data = formatter.Deserialize(stream) as bagState;
+        stream.Close();
+
+        return data;
+
+
+    }
+
+    public static bool CheckBagState()
+    {
+        string path = Application.persistentDataPath + "/bag.algt";
+        return File.Exists(path);
+    }
+
+
+    public static void ResetBagState()
+    {
+        string path = Application.persistentDataPath + "/bag.algt";
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
     }
 
 

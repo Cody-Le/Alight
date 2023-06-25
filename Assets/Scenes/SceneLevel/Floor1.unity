@@ -1310,7 +1310,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42940
+  m_Name: pb_Mesh32582
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9158,6 +9158,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PassiveDoor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399049510222321992, guid: b69932e9ed882ed48bd754efffd9d102,
+        type: 3}
+      propertyPath: sceneName
+      value: Vending
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399049510222321992, guid: b69932e9ed882ed48bd754efffd9d102,
+        type: 3}
+      propertyPath: savePlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6399049510222321992, guid: b69932e9ed882ed48bd754efffd9d102,
         type: 3}
