@@ -11,6 +11,7 @@ public class Menu_handle : MonoBehaviour
         saveSystem.ResetAllStoryState();
         saveSystem.SaveGameState("Classroom");
         saveSystem.ResetBagState();
+        saveSystem.ResetWaterState();
         SceneManager.LoadScene("Classroom");
     }
 

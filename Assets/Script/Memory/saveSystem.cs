@@ -251,4 +251,60 @@ public static class saveSystem
     }
 
 
+
+    public static void SaveWater(bool state)
+    {
+
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        string path = Application.persistentDataPath + "/water.algt";
+        Debug.Log(path);
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        waterState data = new waterState(state);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+
+
+    }
+
+    public static waterState LoadWaterState()
+    {
+        string path = Application.persistentDataPath + "/water.algt";
+        if (!File.Exists(path))
+        {
+            Debug.LogError("Save File not found in" + path);
+            return new waterState(false);
+        }
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(path, FileMode.Open);
+
+        waterState data = formatter.Deserialize(stream) as waterState;
+        stream.Close();
+
+        return data;
+
+
+    }
+
+    public static bool CheckWaterState()
+    {
+        string path = Application.persistentDataPath + "/water.algt";
+        return File.Exists(path);
+    }
+
+
+    public static void ResetWaterState()
+    {
+        string path = Application.persistentDataPath + "/water.algt";
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+    }
+
+
+
 }

@@ -2691,7 +2691,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33678
+  m_Name: pb_Mesh33064
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3807,9 +3807,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d8c882c2bec49479927df49754ff55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animTrigger: {fileID: 0}
-  setPlayerState: {fileID: 0}
-  setSubtitleText: {fileID: 0}
+  animTrigger: {fileID: 11400000, guid: e19569aaef415244f9312e9e2a243534, type: 2}
+  setPlayerState: {fileID: 11400000, guid: 1d1bc7cadddde354994f4dc22fe32beb, type: 2}
+  setSubtitleText: {fileID: 11400000, guid: 2ff571bef37459a44a2718330390bac6, type: 2}
 --- !u!65 &989768295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4310,7 +4310,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33948
+  m_Name: pb_Mesh33354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4954,7 +4954,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-102988
+  m_Name: pb_Mesh-47228
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6635,11 +6635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64877313f87d5e94b9edc1afb62545d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickableHalfExtent: {x: 4, y: 10, z: 4}
-  pickableLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  Inventory: {fileID: 0}
 --- !u!114 &7263722843723644128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6802,6 +6797,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 302559807102029478, guid: 026aa2c2b7267034faf68397f808c108,
+        type: 3}
+      propertyPath: Inventory_on
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1552545706275215574, guid: 026aa2c2b7267034faf68397f808c108,
         type: 3}
       propertyPath: Inventory
