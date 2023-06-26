@@ -8,11 +8,12 @@ public class cameraSwitch : MonoBehaviour
 
     GameObject[] allCameras;
     public Camera childCamera;
+    AudioSource source;
 
     void Start()
     {
         allCameras = GameObject.FindGameObjectsWithTag("MainCamera");
- 
+        source = GetComponent<AudioSource>();
         
     }
 
@@ -24,6 +25,7 @@ public class cameraSwitch : MonoBehaviour
         {
             if(allCameras.Length > 0)
             {
+                source.Play();
                 foreach(GameObject cam in allCameras)
                 {
                     cam.GetComponent<AudioListener>().enabled = false;  
