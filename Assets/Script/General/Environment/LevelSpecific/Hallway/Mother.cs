@@ -19,7 +19,8 @@ public class Mother : MonoBehaviour
         {
             int index = SceneManager.GetActiveScene().buildIndex;
             saveSystem.SavePlayer(playerSave, index);
-            saveSystem.SaveStoryState(1, index);
+            Debug.LogWarning(index);
+            saveSystem.SaveStoryState(30, index);
             SceneManager.LoadScene(NextScene);
         }
 

@@ -13,21 +13,17 @@ public class LightPath : MonoBehaviour
         int index = SceneManager.GetActiveScene().buildIndex;
         if (!saveSystem.CheckStoryState(index))
         {
+            Debug.LogError("No Game State for " + index.ToString());
             afternoonLight.SetActive(false);
             infiniteHallway.SetActive(true);
-            return;
-        }
-
-        if(saveSystem.LoadStoryState(index).state != 0)
+        
+        }else
         {
             afternoonLight.SetActive(true);
             infiniteHallway.SetActive(false);
         }
-        else
-        {
-            afternoonLight.SetActive(false);
-            infiniteHallway.SetActive(true);
-        }
+
+        
 
         
     }

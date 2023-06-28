@@ -17,8 +17,9 @@ public class applyMemory : MonoBehaviour
        
         if (loadMemory)
         {
-            
-            if (!saveSystem.CheckPlayerState(SceneManager.GetActiveScene().buildIndex)) { Debug.LogError("No Memory found"); return; }
+            int index = SceneManager.GetActiveScene().buildIndex;
+            Debug.LogWarning(index);
+            if (!saveSystem.CheckPlayerState(index)) { Debug.LogError("No Memory found"); return; }
             Debug.Log("ApplyingMemory");
             playerState state = saveSystem.LoadPlayer(SceneManager.GetActiveScene().buildIndex);
             Debug.Log(state.isBagged);
