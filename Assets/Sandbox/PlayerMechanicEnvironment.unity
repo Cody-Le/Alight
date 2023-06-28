@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &174122243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2820026969815218889, guid: 618491ca05ee9164d99d1041d8c6989f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2820026971326442710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,6 +2175,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2af4543f3ff82fd4eb175c60db52958d, type: 3}
+--- !u!1001 &4764244681783358230
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 310.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260161, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260164, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: m_Name
+      value: Slips
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764244681903260174, guid: 9c2d1c5b967949a4db2cdf5a0909261d,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 174122243}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c2d1c5b967949a4db2cdf5a0909261d, type: 3}
 --- !u!1 &4768491468365273235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2677,6 +2757,7 @@ GameObject:
   - component: {fileID: 7996196508886016083}
   - component: {fileID: 7996196508886016081}
   - component: {fileID: 23841446492140892}
+  - component: {fileID: 7996196508886016094}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2684,6 +2765,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!81 &7996196508886016094
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996196508886016093}
+  m_Enabled: 1
 --- !u!4 &8025748281491391564
 Transform:
   m_ObjectHideFlags: 0
