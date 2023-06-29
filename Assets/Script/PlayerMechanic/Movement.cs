@@ -12,7 +12,6 @@ public class Movement : MonoBehaviour
     CharacterController controller;
     public float movementSpeed = 1f;
     public float runningFactor = 1.2f;
-    public float positionClamp = 32f;
     public float rotationSpeed = 0.5f;
 
     [Header("Jumping Parameters")]
@@ -95,38 +94,41 @@ public class Movement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        if((Mathf.Abs(move.magnitude) + Mathf.Abs(rotate)) > 0)
-        {
-            if(isWalking == false)
-            {
-                isWalking = true;
-                animator.SetTrigger("Walking");
-             
-            }
-        }
-        else
-        {
-            if (isWalking == true)
-            {
-                isWalking = false;
-                animator.SetTrigger("Idling");
-            }
-        }
+        bool isMoving = ((Mathf.Abs(move.magnitude) + Mathf.Abs(rotate)) > 0);
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            animator.SetBool("isRunning", true);
             isRunning = true;
-
-        }else if(Input.GetKeyUp(KeyCode.LeftShift))
+        }else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            animator.SetBool("isRunning", false);
             isRunning = false;
         }
-        if (positionClamp != 0f)
+
+
+
+        if(isMoving && isRunning)
         {
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -positionClamp, positionClamp), transform.position.y, Mathf.Clamp(transform.position.z, -positionClamp, positionClamp));
+            animator.SetBool("isRunning", true);
+            animator.SetBool("isWalking", false);
+            isWalking = false;
+            
+
+        }else if (isMoving)
+        {
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isRunning", false);
+
         }
+        else
+        {
+            animator.SetBool("isWalking", false); ;
+            animator.SetBool("isRunning", false);
+            animator.SetTrigger("Idling");
+        }
+
+
+
+      
     }
 
    public void setPlayerState(Component sender, object data)

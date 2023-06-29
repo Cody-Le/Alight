@@ -14,7 +14,7 @@ public class fall : MonoBehaviour
         if(other.tag == "Player")
         {
             bool state = saveSystem.CheckWaterState();
-            Debug.Log(state);
+           
             if (!saveSystem.CheckWaterState())
             {
                 onAnimation.Raise(this, animationTrigger);
