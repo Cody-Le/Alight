@@ -94,37 +94,31 @@ public class Movement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        bool isMoving = ((Mathf.Abs(move.magnitude) + Mathf.Abs(rotate)) > 0);
+        
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             isRunning = true;
-        }else if (Input.GetKeyUp(KeyCode.LeftShift))
+            animator.SetBool("isRunning", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             isRunning = false;
+            animator.SetBool("isRunning", false);
         }
 
-
-
-        if(isMoving && isRunning)
+        if (((Mathf.Abs(move.magnitude) + Mathf.Abs(rotate)) > 0) && !isWalking)
         {
-            animator.SetBool("isRunning", true);
-            animator.SetBool("isWalking", false);
+            isWalking = true;
+            animator.SetTrigger("Walking");
+        }else if(((Mathf.Abs(move.magnitude) + Mathf.Abs(rotate)) == 0) && isWalking)
+        {
             isWalking = false;
-            
-
-        }else if (isMoving)
-        {
-            animator.SetBool("isWalking", true);
-            animator.SetBool("isRunning", false);
-
-        }
-        else
-        {
-            animator.SetBool("isWalking", false); ;
-            animator.SetBool("isRunning", false);
+       
             animator.SetTrigger("Idling");
         }
+
+        
 
 
 
