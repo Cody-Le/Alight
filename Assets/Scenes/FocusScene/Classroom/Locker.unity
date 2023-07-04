@@ -357,7 +357,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88522
+  m_Name: pb_Mesh27536
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2321,7 +2321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1623969706
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3259,7 +3259,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1957309966}
   - component: {fileID: 1957309969}
-  - component: {fileID: 1957309968}
   - component: {fileID: 1957309967}
   m_Layer: 0
   m_Name: Hinge
@@ -3304,39 +3303,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!320 &1957309968
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957309964}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 946e02eddc40763438f67b738d34749b, type: 2}
-  m_InitialState: 0
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  - key: {fileID: -5309675006399750695, guid: 946e02eddc40763438f67b738d34749b, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -443693576889795824, guid: 946e02eddc40763438f67b738d34749b, type: 2}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References: []
 --- !u!114 &1957309969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,7 +3316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onSubtitle: {fileID: 11400000, guid: 2ff571bef37459a44a2718330390bac6, type: 2}
-  door: {fileID: 1957309968}
+  door: {fileID: 1963134310}
 --- !u!1 &1963134309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,13 +3344,15 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 43813d216b0ff9f4d90cbd9466671c30, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
+  m_InitialState: 0
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 8413705704748476556, guid: 43813d216b0ff9f4d90cbd9466671c30, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1957309967}
+  - key: {fileID: -8252867604612574438, guid: 43813d216b0ff9f4d90cbd9466671c30, type: 2}
+    value: {fileID: 1623969705}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1963134311

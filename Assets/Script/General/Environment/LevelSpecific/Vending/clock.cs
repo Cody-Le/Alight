@@ -20,11 +20,11 @@ public class clock : MonoBehaviour
 
     private IEnumerator playerStandStill()
     {
-        Debug.Log("ASHAHAHSHHAHSHHA");
+      
         setPlayerState.Raise(this, false);
         yield return new WaitForSeconds(3f);
         setPlayerState.Raise(this, true);
-        Debug.Log("BLUEUEUEUUEUEUEUEU");
+      
     }
 
     private IEnumerator dialog()
