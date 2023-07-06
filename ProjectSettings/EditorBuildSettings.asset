@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FocusScene/Classroom/Locker.unity
     guid: c350e1988e1d0ac4389be113a9b7104b
+  - enabled: 1
+    path: Assets/Scenes/MenuScenes/Settings.unity
+    guid: 98a4fd921f195424580bb6d11cc5b111
+  - enabled: 1
+    path: Assets/Scenes/MenuScenes/EndCredit.unity
+    guid: 52ec0cd1d4fc5164681b9728a120452f
   m_configObjects: {}

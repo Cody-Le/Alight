@@ -24,6 +24,6 @@ public class Menu_handle : MonoBehaviour
 
     public void Settngs()
     {
-
+        SceneManager.LoadScene("Settings");
     }
 }
