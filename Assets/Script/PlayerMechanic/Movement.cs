@@ -22,17 +22,19 @@ public class Movement : MonoBehaviour
     public float groundDistance;
     public LayerMask groundMask;
 
-    public Animator animator;
+    
 
 
     public float jumpHeight = 2f;
-
+    [Header("Animation Parameter")]
+    public Animator animator;
     bool isGrounded = false;
     [HideInInspector] public bool isWalking = false;
     bool isBacking = false;
     [HideInInspector]public bool isRunning = false;
     bool isActive = true;
-
+    bool canStopRunning = true;
+    public float timeBeforeStopRunning = 0.2f;
 
 
     // Start is called before the first frame update
@@ -46,7 +48,11 @@ public class Movement : MonoBehaviour
     void Update()
     {
 
-        if (!isActive) { return; }
+        if (!isActive) { 
+            
+                
+            return; 
+        }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
@@ -110,13 +116,20 @@ public class Movement : MonoBehaviour
 
         if (((Mathf.Abs(move.magnitude) + Mathf.Abs(rotate)) > 0) && !isWalking)
         {
+           
             isWalking = true;
             animator.SetTrigger("Walking");
+
         }else if(((Mathf.Abs(move.magnitude) + Mathf.Abs(rotate)) == 0) && isWalking)
         {
-            isWalking = false;
-       
-            animator.SetTrigger("Idling");
+            StartCoroutine(doubleClickBugStop());
+            if (canStopRunning)
+            {
+               
+                isWalking = false;
+
+                animator.SetTrigger("Idling");
+            }
         }
 
         
@@ -133,5 +146,12 @@ public class Movement : MonoBehaviour
             isActive = (bool)data;
         }
     }
-    
+   
+
+    IEnumerator doubleClickBugStop()
+    {
+        canStopRunning = false;
+        yield return new WaitForSeconds(timeBeforeStopRunning);
+        canStopRunning = true;
+    }
 }

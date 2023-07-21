@@ -60,11 +60,15 @@ public class Audio_player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isActive)
+        if (!isActive)
         {
             isRunning = false;
             isWalking = false;
-            StopCoroutine(soundRoutine);
+            if (soundRoutine != null)
+            {
+                StopCoroutine(soundRoutine);
+            }
+            
         }
 
 

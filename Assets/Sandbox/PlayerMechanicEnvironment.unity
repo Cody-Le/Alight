@@ -811,6 +811,7 @@ MonoBehaviour:
   onAnimation: {fileID: 11400000, guid: e19569aaef415244f9312e9e2a243534, type: 2}
   onPlayerState: {fileID: 11400000, guid: 1d1bc7cadddde354994f4dc22fe32beb, type: 2}
   animationTrigger: Fall
+  CutSceneName: 
 --- !u!65 &1376493492
 BoxCollider:
   m_ObjectHideFlags: 0
