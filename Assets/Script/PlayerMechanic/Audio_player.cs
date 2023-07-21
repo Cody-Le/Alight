@@ -29,7 +29,7 @@ public class Audio_player : MonoBehaviour
     IEnumerator soundRoutine;
     bool isWalking;
     bool isRunning;
-
+    bool isActive = true;
 
     
 
@@ -60,6 +60,14 @@ public class Audio_player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isActive)
+        {
+            isRunning = false;
+            isWalking = false;
+            StopCoroutine(soundRoutine);
+        }
+
+
         if (movementController.isWalking && !isWalking)
         {
             isWalking = true;
@@ -128,6 +136,14 @@ public class Audio_player : MonoBehaviour
             source.Play();
             yield return new WaitForSeconds(source.clip.length + r_delay);
 
+        }
+    }
+
+    public void setPlayerSoundState(Component sender, object data)
+    {
+        if(data is bool)
+        {
+            isActive = false;
         }
     }
 
