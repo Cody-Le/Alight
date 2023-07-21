@@ -14,11 +14,13 @@ public class GameEventListener : MonoBehaviour
 
     private void OnEnable()
     {
+        Cursor.lockState = CursorLockMode.None; 
         gameEvent.RegisterListener(this);
     }
 
     private void OnDisable()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         gameEvent.UnregisterListener(this);
     }
 
